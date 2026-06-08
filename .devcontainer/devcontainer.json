@@ -16,7 +16,8 @@
     "-e",
     "GIT_EDITOR=code --wait",
     "--security-opt",
-    "label=disable"
+    "label=disable",
+    "--name=ha-core-2"
   ],
   "customizations": {
     "vscode": {
@@ -77,5 +78,9 @@
         ]
       }
     }
-  }
+  },
+  "mounts": [
+    // Custom configuration directory
+    "source=/Users/rod/o2kGitHub/HA,target=${containerWorkspaceFolder}/config,type=bind"
+  ]
 }
